@@ -1,0 +1,69 @@
+.tituloDeGaleria {
+  text-align: center;
+}
+
+.galeriaDeImagenes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 25px;
+  justify-items: center;
+}
+
+.galeriaDeImagenes img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.galeriaDeImagenes img:hover {
+  transform: scale(1.2);
+}
+
+/* Esta configuración se hace para nuestros celulares */
+/* Se hace uso media queries para manejar el diseño responsivo */
+
+@media (max-width: 800px) {
+  .tituloDeGaleria {
+    text-align: center;
+    color: red;
+  }
+
+  .galeriaDeImagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 0.2fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 25px;
+    justify-items: center;
+  }
+
+  .galeriaDeImagenes img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 500px) {
+  .tituloDeGaleria {
+    text-align: center;
+    color: red;
+  }
+
+  .galeriaDeImagenes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 25px;
+    justify-items: center;
+  }
+
+  .galeriaDeImagenes img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+}
